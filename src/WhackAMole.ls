@@ -280,7 +280,7 @@ package
 
                     if(moleStates[i] == true) {
                         moleStates[i] = false;
-                        mole.source = "assets/sprites/mole_1.png";
+                        mole.source = "assets/sprites/mole_" + (i + 1) + ".png";
                     }
 
                     if(!Loom2D.juggler.containsTweens(mole))
