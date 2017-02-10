@@ -15,6 +15,7 @@ package
     import loom2d.events.TouchPhase;
     import loom2d.events.KeyboardEvent;
     import loom.platform.LoomKey;
+    import loom.sound.SimpleAudioEngine;
 
     import loom2d.math.Point;
 
@@ -200,6 +201,17 @@ package
         {
             var timeLeftSecs = GAME_TIME_SECS - Math.round(gameTimer.elapsed/1000);
             timeLabel.text = timeLeftSecs.toString();
+
+            // Health check...
+            var strikesLeft = MAX_STRIKES - strikes;
+
+            // Play warning sound during the last 5 seconds
+            if ((timeLeftSecs < 5) || (strikesLeft <= 1)) {
+                if (timeLeftSecs != timeLastHealthWarning) {
+                    SimpleAudioEngine.sharedEngine().playEffect("assets/sounds/health.wav");
+                    timeLastHealthWarning = timeLeftSecs;                
+                }
+            }
         }
 
         protected function createScoreLabels()
@@ -210,7 +222,7 @@ package
             for (var i = 0; i < 4; i++)
             {
                 var score = new SimpleLabel("assets/Curse-hd.fnt");
-                score.text = "+100";
+                score.text = "+" + HIT_POINTS;
                 score.x = -100;
                 score.y = stage.stageHeight * 2 / 5;
                 score.touchable = false;
@@ -318,6 +330,8 @@ package
         {
             var mole = moles[index];
 
+            SimpleAudioEngine.sharedEngine().playEffect("assets/sounds/hit.wav");
+
             // increase the difficulty as we get more moles
             waitTime *= 0.9;
             timer.delay *= 0.9;
@@ -349,6 +363,8 @@ package
             {
                 return;
             }
+
+            SimpleAudioEngine.sharedEngine().playEffect("assets/sounds/miss.wav");
 
             // Disable strike counter...
             //strikes++;
