@@ -1,0 +1,12 @@
+     agent  Listening on port 12340
+     agent  Client connected (7)
+       app  ----------
+       app  WhackAMole
+       app  ----------
+     asset  Loaded 'assets/background/bg_dirt.png', 97.3 KiB (99683 bytes)
+     asset  Loaded 'assets/foreground/grass_upper.png', 307.5 KiB (314929 bytes)
+     asset  Loaded 'assets/sprites/mole_1.png', 21.0 KiB (21507 bytes)
+     asset  Loaded 'assets/foreground/grass_lower.png', 325.0 KiB (332846 bytes)
+     asset  Loaded 'assets/Curse-hd.png', 78.5 KiB (80341 bytes)
+     asset  Loaded 'assets/retry.png', 10.6 KiB (10903 bytes)
+     asset  Loaded 'assets/Red-hd.png', 136.1 KiB (139404 bytes)
