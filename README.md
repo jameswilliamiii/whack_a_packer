@@ -16,4 +16,4 @@ You can whack each player by using keyboard letters:
 This program was made for use with the Makey Makey.  Just plaug into terminals a,s,d on your Makey Makey.  Also plug in a termail to your earth area of the Makey Makey.  You can use any type of conductive objects for whacking the players.  Make sure you remember to hold the earch terminal or it won't work.
 
 ## Notes
-An updated version of the repo (https://github.com/johnbatty/WhackAPotato)[https://github.com/johnbatty/WhackAPotato] for use with the latest version of Loom.
+An updated version of the repo [https://github.com/johnbatty/WhackAPotato](https://github.com/johnbatty/WhackAPotato).  Updated for use with the latest version of Loom, and added a twist to make all Chicago Bears fans happy.
