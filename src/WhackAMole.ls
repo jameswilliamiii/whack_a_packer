@@ -63,6 +63,8 @@ package
 
         override public function run():void
         {
+            SimpleAudioEngine.sharedEngine().playBackgroundMusic("assets/sounds/crowd.wav");
+            SimpleAudioEngine.sharedEngine().setBackgroundMusicVolume(0.1);
             stage.scaleMode = StageScaleMode.FILL;
 
             var screenWidth = stage.stageWidth;
@@ -206,7 +208,7 @@ package
             var strikesLeft = MAX_STRIKES - strikes;
 
             // Play warning sound during the last 5 seconds
-            if ((timeLeftSecs < 5) || (strikesLeft <= 1)) {
+            if ((timeLeftSecs < 11) || (strikesLeft <= 1)) {
                 if (timeLeftSecs != timeLastHealthWarning) {
                     SimpleAudioEngine.sharedEngine().playEffect("assets/sounds/health.wav");
                     timeLastHealthWarning = timeLeftSecs;                
